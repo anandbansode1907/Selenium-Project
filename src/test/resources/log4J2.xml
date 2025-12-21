@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration>
+	<Appenders>
+		<!-- Console appender configuration -->
+		<Console name="console" target="SYSTEM_OUT">
+			<PatternLayout pattern="%d{YYYY-MM-dd HH:mm:ss} [%t] %level %logger::%M::%L %msg%n"></PatternLayout>
+
+		</Console>
+
+		<File name="FileLogger" fileName="logs/test.log" append="false">
+			<PatternLayout pattern="%d{YYYY-MM-dd HH:mm:ss} [%t] %level %logger:: %M::%L %msg%n"></PatternLayout>
+		</File>
+	</Appenders>
+	<Loggers>
+		<Root level="info">
+			<AppenderRef ref="console" />
+			<AppenderRef ref="FileLogger" />
+		</Root>
+	</Loggers>
+</Configuration>
