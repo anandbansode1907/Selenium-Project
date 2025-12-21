@@ -14,7 +14,7 @@ public class LoginTestCSV {
 
 	@BeforeMethod(description = "Load the homepage of the website")
 	public void setUp() {
-		homePage = new HomePage(EDGE);
+		homePage = new HomePage(EDGE, true);
 	}
 
 	
