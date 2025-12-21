@@ -104,16 +104,17 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
-				<version>3.0.0-M5</version>
+				<version>3.5.1</version>
 				<configuration>
 					<suiteXmlFiles>
-						<suiteXmlFile>
-                            ${suite}.xml
-                       </suiteXmlFile>
+						<suiteXmlFile>testNG.xml</suiteXmlFile>
 					</suiteXmlFiles>
-					<argLine>
-            -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
-        </argLine>
+
+					<systemPropertyVariables>
+						<browser>edge</browser>
+						<isLamdaTest>false</isLamdaTest>
+						<isHeadless>false</isHeadless>
+					</systemPropertyVariables>
 				</configuration>
 
 				<dependencies>
